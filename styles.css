@@ -1,0 +1,199 @@
+/* Основные стили */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #28a745;
+}
+
+.language-switcher {
+    display: flex;
+}
+
+.language-btn {
+    margin-left: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border: 1px solid #28a745;
+    background-color: transparent;
+    color: #28a745;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.language-btn:hover {
+    background-color: #28a745;
+    color: #fff;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+label, select, input, button {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+#result, #advice {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+aside, #materials, #share {
+    margin-top: 20px;
+}
+
+#tripHistory {
+    list-style-type: none;
+    padding: 0;
+}
+
+#tripHistory li {
+    background-color: #e9ecef;
+    margin-bottom: 5px;
+    padding: 10px;
+    border-left: 5px solid #28a745;
+    border-radius: 5px;
+}
+
+#materials {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#share {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#share button {
+    border: 1px solid #1da1f2;
+    background-color: transparent;
+    color: #1da1f2;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#share button:hover {
+    background-color: #1da1f2;
+    color: #fff;
+}
+
+/* Адаптивный дизайн */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .language-switcher {
+        margin-top: 10px;
+    }
+}
+#statistics {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+}
+
+canvas {
+    max-width: 100%;
+    height: auto;
+}
+#dailyCarbonCalculator {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+}
+
+#dailyCarbonForm {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+#dailyCarbonForm label, #dailyCarbonForm select, #dailyCarbonForm input, #dailyCarbonForm button {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+}
+
+#dailyCarbonForm button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#dailyCarbonForm button:hover {
+    background-color: #218838;
+}
+
+#dailyResult {
+    margin-top: 20px;
+    font-weight: bold;
+}

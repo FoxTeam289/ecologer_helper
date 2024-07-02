@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рассчитать углеродный след автомобиля - Экологический помощник</title>
+    <meta name="description" content="Узнайте, как рассчитать углеродный след вашего автомобиля и получите советы по его уменьшению с помощью Экологического помощника.">
+    <meta name="keywords" content="углеродный след автомобиля, рассчитать углеродный след автомобиля, уменьшить углеродный след автомобиля, экологичность автомобиля">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="canonical" href="https://foxteam289.github.io/ecologer_helper/car-carbon-footprint.html">
+    <meta property="og:title" content="Рассчитать углеродный след автомобиля - Экологический помощник">
+    <meta property="og:description" content="Узнайте, как рассчитать углеродный след вашего автомобиля и получите советы по его уменьшению с помощью Экологического помощника.">
+    <meta property="og:url" content="https://foxteam289.github.io/ecologer_helper/car-carbon-footprint.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://foxteam289.github.io/ecologer_helper/image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Рассчитать углеродный след автомобиля - Экологический помощник">
+    <meta name="twitter:description" content="Узнайте, как рассчитать углеродный след вашего автомобиля и получите советы по его уменьшению с помощью Экологического помощника.">
+    <meta name="twitter:image" content="https://foxteam289.github.io/ecologer_helper/image.jpg">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Рассчитать углеродный след автомобиля</h1>
+            <div class="language-switcher">
+                <button data-lang="ru" class="language-btn">RU</button>
+                <button data-lang="en" class="language-btn">EN</button>
+            </div>
+        </header>
+        <main>
+            <form id="carbonForm">
+                <label for="transport">Вид транспорта:</label>
+                <select id="transport" name="transport">
+                    <option value="car">Автомобиль</option>
+                    <option value="electricCar">Электромобиль</option>
+                    <option value="bike">Велосипед</option>
+                    <option value="public">Общественный транспорт</option>
+                    <option value="walking">Пешком</option>
+                    <option value="scooter">Электросамокат</option>
+                    <option value="motorcycle">Мотоцикл</option>
+                    <option value="train">Поезд</option>
+                    <option value="plane">Самолет</option>
+                    <option value="boat">Лодка</option>
+                    <option value="bus">Автобус</option>
+                </select>
+
+                <label for="distance">Расстояние (км):</label>
+                <input type="number" id="distance" name="distance" required>
+
+                <button type="submit">Рассчитать углеродный след</button>
+            </form>
+            <div id="result"></div>
+            <div id="advice"></div>
+        </main>
+        <aside>
+            <h2>История поездок</h2>
+            <ul id="tripHistory"></ul>
+        </aside>
+        <section id="materials">
+            <h2>Советы и материалы</h2>
+            <p>Здесь будут полезные советы и материалы по снижению углеродного следа.</p>
+        </section>
+        <section id="share">
+            <h2>Поделитесь своими достижениями</h2>
+            <button onclick="shareOnSocialMedia()">Поделиться в соц. сетях</button>
+        </section>
+        <section id="statistics">
+            <h2>Статистика и графики</h2>
+            <canvas id="carbonChart"></canvas>
+        </section>
+        <section id="dailyCarbonCalculator">
+            <h2>Калькулятор углеродного следа для повседневной жизни</h2>
+            <form id="dailyCarbonForm">
+                <label for="activity">Вид деятельности:</label>
+                <select id="activity" name="activity">
+                    <option value="electricity">Электроэнергия</option>
+                    <option value="naturalGas">Природный газ</option>
+                    <option value="water">Вода</option>
+                    <option value="heatingOil">Отопительное масло</option>
+                    <option value="waste">Отходы</option>
+                    <option value="foodMeat">Потребление мяса</option>
+                    <option value="foodVegetarian">Растительная пища</option>
+                    <option value="clothing">Покупка одежды</option>
+                    <option value="electronics">Электроника</option>
+                    <option value="furniture">Мебель</option>
+                    <option value="airTravel">Авиаперелеты</option>
+                    <option value="trainTravel">Путешествие на поезде</option>
+                    <option value="carTravel">Поездка на автомобиле</option>
+                    <option value="publicTransport">Общественный транспорт</option>
+                    <!-- Добавьте дополнительные типы деятельности здесь -->
+                </select>
+
+                <label for="quantity">Количество (единицы):</label>
+                <input type="number" id="quantity" name="quantity" required>
+
+                <button type="submit">Рассчитать углеродный след</button>
+            </form>
+            <div id="dailyResult"></div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

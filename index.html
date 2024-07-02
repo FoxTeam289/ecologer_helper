@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Экологический помощник - Рассчитайте свой углеродный след и уменьшите его</title>
+    <meta name="description" content="Экологический помощник поможет вам рассчитать углеродный след от различных видов деятельности и предложит советы по его уменьшению.">
+    <meta name="keywords" content="экологический помощник, углеродный след, рассчитать углеродный след, уменьшить углеродный след, защита окружающей среды, экологичность">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="canonical" href="https://foxteam289.github.io/ecologer_helper/">
+    <meta property="og:title" content="Экологический помощник - Рассчитайте свой углеродный след и уменьшите его">
+    <meta property="og:description" content="Экологический помощник поможет вам рассчитать углеродный след от различных видов деятельности и предложит советы по его уменьшению.">
+    <meta property="og:url" content="https://foxteam289.github.io/ecologer_helper/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://foxteam289.github.io/ecologer_helper/image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Экологический помощник - Рассчитайте свой углеродный след и уменьшите его">
+    <meta name="twitter:description" content="Экологический помощник поможет вам рассчитать углеродный след от различных видов деятельности и предложит советы по его уменьшению.">
+    <meta name="twitter:image" content="https://foxteam289.github.io/ecologer_helper/image.jpg">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 data-lang="title">Экологический помощник</h1>
+            <div class="language-switcher">
+                <button data-lang="ru" class="language-btn">RU</button>
+                <button data-lang="en" class="language-btn">EN</button>
+            </div>
+        </header>
+        <main>
+            <form id="carbonForm">
+                <label for="transport" data-lang="transport">Вид транспорта:</label>
+                <select id="transport" name="transport">
+                    <option value="car" data-lang="car">Автомобиль</option>
+                    <option value="electricCar" data-lang="electricCar">Электромобиль</option>
+                    <option value="bike" data-lang="bike">Велосипед</option>
+                    <option value="public" data-lang="public">Общественный транспорт</option>
+                    <option value="walking" data-lang="walking">Пешком</option>
+                    <option value="scooter" data-lang="scooter">Электросамокат</option>
+                    <option value="motorcycle" data-lang="motorcycle">Мотоцикл</option>
+                    <option value="train" data-lang="train">Поезд</option>
+                    <option value="plane" data-lang="plane">Самолет</option>
+                    <option value="boat" data-lang="boat">Лодка</option>
+                    <option value="bus" data-lang="bus">Автобус</option>
+                </select>
+                <section id="dailyCarbonCalculator">
+                    <h2 data-lang="dailyCalculator">Калькулятор углеродного следа для повседневной жизни</h2>
+                    <form id="dailyCarbonForm">
+                        <label for="activity" data-lang="activity">Вид деятельности:</label>
+                        <select id="activity" name="activity">
+                            <option value="electricity" data-lang="electricity">Электроэнергия</option>
+                            <option value="naturalGas" data-lang="naturalGas">Природный газ</option>
+                            <option value="water" data-lang="water">Вода</option>
+                            <option value="heatingOil" data-lang="heatingOil">Отопительное масло</option>
+                            <option value="waste" data-lang="waste">Отходы</option>
+                            <option value="foodMeat" data-lang="foodMeat">Потребление мяса</option>
+                            <option value="foodVegetarian" data-lang="foodVegetarian">Растительная пища</option>
+                            <option value="clothing" data-lang="clothing">Покупка одежды</option>
+                            <option value="electronics" data-lang="electronics">Электроника</option>
+                            <option value="furniture" data-lang="furniture">Мебель</option>
+                            <option value="airTravel" data-lang="airTravel">Авиаперелеты</option>
+                            <option value="trainTravel" data-lang="trainTravel">Путешествие на поезде</option>
+                            <option value="carTravel" data-lang="carTravel">Поездка на автомобиле</option>
+                            <option value="publicTransport" data-lang="publicTransport">Общественный транспорт</option>
+                            <!-- Добавьте дополнительные типы деятельности здесь -->
+                        </select>
+                
+                        <label for="quantity" data-lang="quantity">Количество (единицы):</label>
+                        <input type="number" id="quantity" name="quantity" required>
+                
+                        <button type="submit" data-lang="calculate">Рассчитать углеродный след</button>
+                    </form>
+                    <div id="dailyResult"></div>
+                </section>
+
+                <label for="distance" data-lang="distance">Расстояние (км):</label>
+                <input type="number" id="distance" name="distance" required>
+
+                <button type="submit" data-lang="calculate">Рассчитать углеродный след</button>
+            </form>
+            <div id="result"></div>
+            <div id="advice"></div>
+        </main>
+        <aside>
+            <h2 data-lang="history">История поездок</h2>
+            <ul id="tripHistory"></ul>
+        </aside>
+        <section id="materials">
+            <h2 data-lang="materials">Советы и материалы</h2>
+            <p data-lang="materialContent">Здесь будут полезные советы и материалы по снижению углеродного следа.</p>
+        </section>
+        <section id="statistics">
+            <h2 data-lang="statistics">Статистика и графики</h2>
+            <canvas id="carbonChart"></canvas>
+        </section>
+        <section id="share">
+            <h2 data-lang="share">Поделитесь своими достижениями</h2>
+            <button onclick="shareOnSocialMedia()">Поделиться в соц. сетях</button>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
